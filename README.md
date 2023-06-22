@@ -2,14 +2,6 @@
 
 The `p5-vite-boilerplate` is a ready-to-use project setup for creating interactive graphics with p5.js, leveraging the modern build tool Vite. The boilerplate comes with a pre-configured Vite development server and a base sketch. It provides a robust and efficient starting point for p5.js projects, especially for testing new ideas and creating drafts.
 
-## Files
-
-- **index.html**: The main HTML file that links to the JavaScript and CSS files.
-- **main.js**: The main JavaScript file where you can start your p5.js sketch.
-- **style.css**: A basic CSS file for customizing styles.
-- **vite.config.js**: The Vite configuration file.
-- **package.json**: The Node.js manifest file containing metadata about the project and its dependencies.
-
 ## Usage
 
 To start using this boilerplate, you'll need to have Node.js and npm installed on your computer. Follow these steps:
