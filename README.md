@@ -47,6 +47,7 @@ const sizes = getSizes(aspectRatio)
 
 // create a p5 sketch
 const sketch = (p) => {
+
   p.setup = () => {
     p.createCanvas(sizes.width, sizes.height)
   }
@@ -54,6 +55,7 @@ const sketch = (p) => {
   p.draw = () => {
     p.background(220)
   }
+
 
   // resize the canvas when the window is resized
   p.windowResized = () => {
