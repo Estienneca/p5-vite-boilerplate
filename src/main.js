@@ -1,3 +1,4 @@
+import './style.css'
 import p5 from "p5"
 
 // set the aspect ratio of the canvas
@@ -15,6 +16,13 @@ const sketch = (p) => {
 
   p.draw = () => {
     p.background(220)
+  }
+
+  p.windowResized = () => {
+    const newSizes = getSizes(aspectRatio)
+    sizes.width = newSizes.width
+    sizes.height = newSizes.height
+    p.resizeCanvas(sizes.width, sizes.height)
   }
 }
 

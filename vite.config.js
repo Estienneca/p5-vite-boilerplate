@@ -1,4 +1,7 @@
 export default {
+  root: 'src/',
+  publicDir: '../public/',
+  base: './',
   server:
   {
       host: true,
