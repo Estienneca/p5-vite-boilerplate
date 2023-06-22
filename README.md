@@ -10,7 +10,7 @@ To start using this boilerplate, you'll need to have Node.js and npm installed o
 
 1. Use degit to create a new project based on this repository.
 ```bash
-npx degit Estienne/p5-vite-boilerplate
+npx degit Estienne/p5-vite-boilerplate your-project-name
 ```
 
 2. Navigate into the cloned directory.
