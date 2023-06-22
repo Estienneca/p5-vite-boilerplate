@@ -15,7 +15,7 @@ npx degit Estienneca/p5-vite-boilerplate your-project-name
 
 2. Navigate into the cloned directory.
 ```bash
-cd p5-vite-boilerplate
+cd your-project-name
 ```
 
 3. Install the dependencies.
