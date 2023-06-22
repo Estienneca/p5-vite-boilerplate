@@ -36,20 +36,20 @@ It will automatically open the application in your default browser.
 The `main.js` file contains a default `sketch` function you can start to edit.
 ```javascript
 const sketch = (p) => {
-	p.setup = () => {
-		p.createCanvas(sizes.width, sizes.height)
-	}
-	  
-	p.draw = () => {
-		p.background(220)
-	}
+    p.setup = () => {
+        p.createCanvas(sizes.width, sizes.height)
+    }
+    
+    p.draw = () => {
+	p.background(220)
+    }
 
-  p.windowResized = () => {
-    const newSizes = getSizes(aspectRatio)
-    sizes.width = newSizes.width
-    sizes.height = newSizes.height
-    p.resizeCanvas(sizes.width, sizes.height)
-  }
+    p.windowResized = () => {
+        const newSizes = getSizes(aspectRatio)
+        sizes.width = newSizes.width
+        sizes.height = newSizes.height
+        p.resizeCanvas(sizes.width, sizes.height)
+    }
 }
 ```
 
