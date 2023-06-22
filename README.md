@@ -35,21 +35,49 @@ It will automatically open the application in your default browser.
 
 The `main.js` file contains a default `sketch` function you can start to edit.
 ```javascript
-const sketch = (p) => {
-    p.setup = () => {
-        p.createCanvas(sizes.width, sizes.height)
-    }
-    
-    p.draw = () => {
-	p.background(220)
-    }
+import './style.css'
+import p5 from "p5"
 
-    p.windowResized = () => {
-        const newSizes = getSizes(aspectRatio)
-        sizes.width = newSizes.width
-        sizes.height = newSizes.height
-        p.resizeCanvas(sizes.width, sizes.height)
-    }
+// set the aspect ratio of the canvas
+const aspectRatio = 3 / 4
+
+// get the minimum size of the canvas and calculate the width and height
+const canvasMinSize = Math.min(window.innerWidth, window.innerHeight)
+const sizes = getSizes(aspectRatio)
+
+// create a p5 sketch
+const sketch = (p) => {
+  p.setup = () => {
+    p.createCanvas(sizes.width, sizes.height)
+  }
+
+  p.draw = () => {
+    p.background(220)
+  }
+
+  // resize the canvas when the window is resized
+  p.windowResized = () => {
+    const newSizes = getSizes(aspectRatio)
+    sizes.width = newSizes.width
+    sizes.height = newSizes.height
+    p.resizeCanvas(sizes.width, sizes.height)
+  }
+}
+
+// create a new instance of p5 and run the sketch
+new p5(sketch)
+
+// helper function to get the sizes of the canvas
+function getSizes(aspectRatio) {
+  const sizes = {}
+  if (window.innerWidth / window.innerHeight > aspectRatio) {
+    sizes.width = ~~(window.innerHeight * aspectRatio)
+    sizes.height = ~~window.innerHeight
+  } else {
+    sizes.width = ~~window.innerWidth
+    sizes.height = ~~(window.innerWidth / aspectRatio)
+  }
+  return sizes
 }
 ```
 
