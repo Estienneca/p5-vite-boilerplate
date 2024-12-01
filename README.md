@@ -12,7 +12,7 @@ The `p5-vite-boilerplate` is a ready-to-use project setup for creating interacti
 
 Clone the repository into a new project directory.
 ```bash
-git clone https://github.com/Estienneca/p5-vite-boilerplate your-project-name
+npx degit https://github.com/Estienneca/p5-vite-boilerplate your-project-name
 ```
 
 Navigate into the cloned directory.
